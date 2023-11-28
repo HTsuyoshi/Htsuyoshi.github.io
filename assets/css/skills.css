@@ -39,6 +39,7 @@
 
 .card-container {
 	width: 120px;
+	height: 100px;
 }
 
 .card-container > img {
@@ -50,12 +51,12 @@
   display: inline-block;
   position: relative;
   width: 80px;
-  height: 80px;
+  height: 140px;
 }
 
 .loading > div {
   position: absolute;
-  top: 33px;
+  top: 63px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
