@@ -44,8 +44,8 @@ footer span
 	pointer-events: none;
 	position: absolute;
 	filter: drop-shadow(0 0 0.25rem #ffffff);
-	bottom: -300vh;
-	left: -300vw;
+	bottom: -300svh;
+	left: -300svw;
 	width: 100px;
 	height: 100px;
 }
