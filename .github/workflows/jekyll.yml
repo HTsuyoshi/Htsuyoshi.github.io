@@ -21,26 +21,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-            
+
       - name: Create build dir
         run: mkdir build
-        
+
       - name: Build website
         uses: helaili/jekyll-action@2.5.0
         with:
           build_only: true
           build_dir: build
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        path: ./build
+        with:
+          path: ./build
 
   # Deployment job
   deploy:
