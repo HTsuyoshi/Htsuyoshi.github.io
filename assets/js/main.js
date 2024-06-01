@@ -125,7 +125,7 @@ async function github_events() {
 		status.appendChild(repo);
 
 		var msg = document.createElement("div");
-		msg.innerHTML = 'commit: ' + d[i].payload.commits[0].message;
+		msg.innerHTML = 'commit: ' + ((d[i].payload.commits[0].message.length > 50) ? d[i].payload.commits[0].message.substr(0, 50) + '...' : d[i].payload.commits[0].message);
 		msg.id = 'message';
 		status.appendChild(msg);
 
